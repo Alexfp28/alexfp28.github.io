@@ -10,10 +10,15 @@ export default {
         {label: 'Angular', color1: '#fa8391', color2: '#ff0000', value: 10, icon: 'https://raw.githubusercontent.com/Alexfp28/website/master/images/angular.png'}
       ],
       events: [
-        { status: '2FCGM', date: '16 años', icon: 'pi pi-check', color: '#bf2b7b',
+        { status: '2FCGM', date: '16 años', icon: 'pi pi-check', color: '#bf2b7b', image: "https://raw.githubusercontent.com/Alexfp28/website/master/images/partsofpc.jpg",
           desc: "Este inicio de curso fue un el comienzo del camino, donde empecé a interesarme más sobre el mundo de la informática, " +
               "tengo que decir que no toqué nada de lenguajes de programación, pero empezaba a mirar documentación relacionada con Java " +
               "y Python por recomendación de un profesor."
+        },
+        { status: 'Curso', date: '18 años', icon: 'pi pi-check', color: '#bf2b7b',image: 'https://raw.githubusercontent.com/Alexfp28/website/master/images/programming.jpeg',
+          desc: "El inicio de este curso fue un tanto diferente, empecé tocando lenguajes como Java y MySQL, pero a medida que iba avanzando " +
+              "me interesaba más la programción web, cuando llegué al año actual me decidí por dar lo mejor de mi (dándolo anteriormente), " +
+              "para poder destacar en lo mío y poder aspirar lejos, fue ahí donde inicie cursos de programación web sobre Angula, React y Vue.js..."
         },
         { status: '2CFGS', date: '18 años', icon: 'pi pi-spin pi-cog', color: '#bf2b7b',image: 'https://raw.githubusercontent.com/Alexfp28/website/master/images/programming.jpeg',
           desc: "El inicio de este curso fue un tanto diferente, empecé tocando lenguajes como Java y MySQL, pero a medida que iba avanzando " +
@@ -62,7 +67,8 @@ export default {
     </Toolbar>
 
 
-    <div id="home" class="mt-3">
+    <div id="home" class="mt-3 align-items-center justify-content-center">
+      <h1 style="text-align:center">Aprendiendo...</h1>
       <Timeline :value="events" align="alternate" class="customized-timeline">
         <template #marker="slotProps">
                 <span class="flex w-2rem h-2rem align-items-center justify-content-center text-white border-circle z-1 shadow-1" :style="{ backgroundColor: slotProps.item.color }">
