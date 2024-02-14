@@ -20,7 +20,7 @@ export default {
   <main>
     <Toolbar style="border-radius: 3rem; padding: 1rem 1rem 1rem 1.5rem; border-color: #bf2b7b">
       <template #start>
-        <Avatar image="src/assets/images/logo-circular.png" style="width: 32px; height: 32px"/>
+        <Avatar image="images/logo-circular.png" style="width: 32px; height: 32px"/>
         <div class="flex align-items-center gap-2 ml-3">
           <a href="#home"> <Button label="Home" text plain /></a>
           <a href="#personal"><Button label="About me" text plain /></a>
@@ -43,7 +43,7 @@ export default {
             <SplitterPanel class="flex align-items-center justify-content-center" :size="50">
               <Card style="width: 25rem; overflow: hidden;" class="mt-3 mb-3">
                 <template #header>
-                  <img alt="user header" src="../assets/images/background.jpg" width="400"/>
+                  <img alt="user header" src="../../images/background.jpg" width="400"/>
                 </template>
                 <template #title>Alex López</template>
                 <template #subtitle>¿Cómo me describen?</template>
@@ -63,7 +63,7 @@ export default {
             <SplitterPanel class="flex align-items-center justify-content-center" :size="50">
               <Card style="width: 25rem; overflow: hidden;" class="mt-3 mb-3">
                 <template #header>
-                  <img alt="user header" src="../assets/images/gimnasio.jpg" width="400"/>
+                  <img alt="user header" src="../../images/gimnasio.jpg" width="400"/>
                 </template>
                 <template #title>Ejercicio</template>
                 <template #subtitle>Mi día a día...</template>
