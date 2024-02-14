@@ -31,19 +31,19 @@ export default {
     <ToolBarComponent/>
     <HomeComponent/>
 
-    <div class="h-10rem"/>
+    <div class="h-5rem"/>
 
    <LearnComponent/>
 
-    <div class="h-10rem"/>
+    <div class="h-5rem"/>
 
     <AboutComponent/>
 
-    <div class="h-10rem"/>
+    <div class="h-5rem"/>
 
     <LaboralComponent/>
 
-    <div class="h-10rem"/>
+    <div class="h-5rem"/>
 
     <ExperienceComponent/>
 
