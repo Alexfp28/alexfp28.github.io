@@ -15,10 +15,11 @@ export default {
               "tengo que decir que no toqué nada de lenguajes de programación, pero empezaba a mirar documentación relacionada con Java " +
               "y Python por recomendación de un profesor."
         },
-        { status: 'Curso', date: '18 años', icon: 'pi pi-check', color: '#bf2b7b',image: 'https://raw.githubusercontent.com/Alexfp28/website/master/images/programming.jpeg',
-          desc: "El inicio de este curso fue un tanto diferente, empecé tocando lenguajes como Java y MySQL, pero a medida que iba avanzando " +
-              "me interesaba más la programción web, cuando llegué al año actual me decidí por dar lo mejor de mi (dándolo anteriormente), " +
-              "para poder destacar en lo mío y poder aspirar lejos, fue ahí donde inicie cursos de programación web sobre Angula, React y Vue.js..."
+        { status: 'Curso FlexyGo Low Code', date: '18 años', icon: 'pi pi-check', color: '#bf2b7b',image: 'https://raw.githubusercontent.com/Alexfp28/website/master/images/udemy.png',
+          desc: "Inicie un curso ofrecido por mi tutora, Nereida, nos recomendó realizarlo para poder gestionar una empresa si somos trabajadores" +
+              " o nuestra propia empresa con un framework llamado FlexyGo, la verdad que me impactó mucho la personalización que tiene y poder " +
+              "calcular y tener registro de todo lo que necesites con un poco de código (Low Code). ",
+          url: "https://www.udemy.com/certificate/UC-47e0593f-c641-4182-9f01-940ccbe0119b/"
         },
         { status: '2CFGS', date: '18 años', icon: 'pi pi-spin pi-cog', color: '#bf2b7b',image: 'https://raw.githubusercontent.com/Alexfp28/website/master/images/programming.jpeg',
           desc: "El inicio de este curso fue un tanto diferente, empecé tocando lenguajes como Java y MySQL, pero a medida que iba avanzando " +
@@ -50,25 +51,103 @@ export default {
     }
   }
 }
+
+@keyframes slidedown-icon {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.slidedown-icon {
+  animation: slidedown-icon;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.zoom {
+  transition: transform .2s;
+  width: 100px;
+  height: 100px;
+
+}
+
+.zoomAvatar {
+  transition: transform .2s;
+  margin-left: 10px
+}
+
+.zoomAvatar:hover {
+  transform: scale(1.2);
+}
+
+.zoom:hover {
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
 </style>
 
 
 <template>
   <main>
-    <Toolbar style="border-radius: 3rem; padding: 1rem 1rem 1rem 1.5rem; border-color: #bf2b7b">
+    <Toolbar style="border-radius: 3rem; padding: 1rem 1rem 1rem 1.5rem; border-color: #bf2b7b; text-align: center">
       <template #start>
-        <Avatar image="https://raw.githubusercontent.com/Alexfp28/website/master/images/logo-circular.png" style="width: 32px; height: 32px"/>
-        <div class="flex align-items-center gap-2 ml-3">
-          <a href="#home"> <Button label="Home" text plain /></a>
-          <a href="#personal"><Button label="About me" text plain /></a>
-          <a href="#experiencia"> <Button label="Frameworks" text plain /> </a>
-        </div>
+        <Avatar image="https://raw.githubusercontent.com/Alexfp28/website/master/images/logo-circular.png" style="width: 32px; height: 32px" class="zoomAvatar"/>
+      </template>
+      <template #center>
+          <h2 style="text-align: center" class="mr-6">Alexfp28();</h2>
       </template>
     </Toolbar>
 
 
-    <div id="home" class="mt-3 align-items-center justify-content-center">
-      <h1 style="text-align:center">Aprendiendo...</h1>
+    <div id="home"
+         class="align-items-center mb-5 mt-4 mr-2 ml-2 animation-duration-1000">
+      <Splitter layout="vertical" style=" border-color: #bf2b7b">
+        <SplitterPanel :size="50">
+        <div class="flex justify-content-center mt-4">
+          <Avatar image="https://raw.githubusercontent.com/Alexfp28/website/master/images/Avatar.png" class="w-10rem h-10rem zoom"/>
+        </div>
+        <div class="flex justify-content-center">
+          <h1>Alex López</h1>
+        </div>
+        <div class="flex justify-content-center mr-8 ml-8 mb-3">
+          <p>
+            Soy una persona con ganas de aprender y poder seguir hacia delante con mis proyectos, como por ejemplo puede ser esta página web, está hecha desde 0 con Vue.js,
+            <br>
+            para poder demostrar mi nivel en Vue.js, también he usado una librería de componentes como es PrimeVue, me ha ayudado bastante con el diseño de la página y poder
+            <br>
+            gestionar mis atributos / variables con gusto.
+          </p>
+        </div>
+          <div class="flex justify-content-center mr-8 ml-8 mb-3">
+            <a href="https://www.linkedin.com/in/alex-lópez-62b2222a0" style="text-decoration: none;"><Avatar icon="pi pi-linkedin" class="mr-2 zoomAvatar" size="large" shape="circle" style="background-color: #bf2b7b; color: white"/></a>
+            <a href="mailto:alexlopezdelafuente@gmail.com" style="text-decoration: none;"><Avatar icon="pi pi-envelope" class="mr-2 zoomAvatar" size="large" shape="circle" style="background-color: #bf2b7b; color: white"/></a>
+            <a href="https://github.com/Alexfp28" style="text-decoration: none;"><Avatar icon="pi pi-github" class="mr-2 zoomAvatar" size="large" shape="circle" style="background-color: #bf2b7b; color: white"/></a>
+          </div>
+        </SplitterPanel>
+      </Splitter>
+    </div>
+
+    <div class="card flex flex-column align-items-center">
+      <div class="flex flex-column align-items-center gap-2">
+        <span class="text-xl font-medium">Desliza hacia abajo...</span>
+        <span class="slidedown-icon h-2rem w-2rem bg-primary border-circle inline-flex align-items-center justify-content-center">
+                <i class="pi pi-arrow-down" />
+            </span>
+      </div>
+    </div>
+
+    <div class="h-10rem"/>
+
+    <div id="learn" v-animation-on-scroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }"
+         class="mt-3 align-items-center justify-content-center">
+      <h1 style="text-align:center">Learning...</h1>
       <Timeline :value="events" align="alternate" class="customized-timeline">
         <template #marker="slotProps">
                 <span class="flex w-2rem h-2rem align-items-center justify-content-center text-white border-circle z-1 shadow-1" :style="{ backgroundColor: slotProps.item.color }">
@@ -86,18 +165,20 @@ export default {
             <template #content>
               <img v-if="slotProps.item.image" :src="`${slotProps.item.image}`" :alt="slotProps.item.name" width="200" class="shadow-1" />
               <p v-text="slotProps.item.desc"/>
+              <Button v-if="slotProps.item.url" outlined>
+                <a href="https://www.udemy.com/certificate/UC-47e0593f-c641-4182-9f01-940ccbe0119b/" style="text-decoration: none;" target="_blank">Certificado</a>
+              </Button>
             </template>
           </Card>
         </template>
       </Timeline>
     </div>
 
+    <div class="h-10rem"/>
 
-
-    <div class="h-30rem"/>
-
-    <div id="personal" v-animation-on-scroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }"
+    <div id="about" v-animation-on-scroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }"
          class="align-items-center mb-5 mt-3 mr-2 ml-2 animation-duration-1000">
+      <h1 style="text-align:center">Personal Experience...</h1>
       <Splitter layout="vertical" style=" border-color: #bf2b7b">
         <SplitterPanel :size="50">
           <Splitter style=" border-color: #bf2b7b">
@@ -126,7 +207,7 @@ export default {
                 <template #header>
                   <img alt="user header" src="../../images/gimnasio.jpg" width="400"/>
                 </template>
-                <template #title>Ejercicio</template>
+                <template #title>Vida Saludable (GYM)</template>
                 <template #subtitle>Mi día a día...</template>
                 <template #content>
                   <p class="m-0">
@@ -145,11 +226,76 @@ export default {
       </Splitter>
     </div>
 
-    <div class="h-30rem"/>
+    <div class="h-10rem"/>
 
+    <div id="laboral" v-animation-on-scroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }" class="card animation-duration-1000 mb-8 ml-2 mr-2">
+      <h1 style="text-align:center">Laboral Experience...</h1>
+      <Splitter layout="vertical" style=" border-color: #bf2b7b">
+        <SplitterPanel :size="50">
+          <Splitter style=" border-color: #bf2b7b">
+            <SplitterPanel class="flex align-items-center justify-content-center" :size="50">
+              <Card style="width: 25rem; overflow: hidden;" class="mt-3 mb-3">
+                <template #header>
+                  <img alt="user header" src="../../images/background.jpg" width="400"/>
+                </template>
+                <template #title>Ayuntamiento La Vall d'Uixó</template>
+                <template #subtitle>Contrato de prácticas</template>
+                <template #content>
+                  <p class="m-0">
+                    Al comenzar mis prácticas, me propusieron un
+                    reto: una migración entre diferentes S.O, fue todo
+                    un desafío porque nunca había realizado ninguna
+                    tarea similar.
+                    <br><br>
+                    Ni siquiera en el ciclo habíamos recibido
+                    formación al respeto.
+                    <br><br>
+                    Tras mi FCT me di cuenta que soy una persona
+                    que destaca en ser autodidacta y que se crece
+                    frente a los impedimentos.
+                  </p>
+                </template>
+              </Card>
+
+            </SplitterPanel>
+            <SplitterPanel class="flex align-items-center justify-content-center" :size="50">
+              <Card style="width: 25rem; overflow: hidden;" class="mt-3 mb-3">
+                <template #header>
+                  <img alt="user header" src="../../images/gimnasio.jpg" width="400"/>
+                </template>
+                <template #title>Trabajo en el campo</template>
+                <template #subtitle>Voluntad y compromiso</template>
+                <template #content>
+                  <p class="m-0">
+                    Desde pequeño he tenido la suerte de vivir en
+                    primera persona lo que es tener un negocio
+                    familiar: constancia, sacrificio y compromiso.
+                    <br><br>
+                    En la familia tenemos fincas de olivos y
+                    desde pequeño siempre he colaborado en la
+                    recogida, procesamiento y venta del aceite
+                    de oliva.
+                    <br><br>
+                    "Contra más morado más calidad" que no
+                    significa otra cosa que hay que dejar lo
+                    tiempos de maduración oportunos para
+                    ofrecer lo mejor al cliente.
+                    <br><br>
+                    Y esto es lo que aplico siempre en mis
+                    proyectos: entrega y excelencia hasta el final.
+                  </p>
+                </template>
+              </Card>
+            </SplitterPanel>
+          </Splitter>
+        </SplitterPanel>
+      </Splitter>
+    </div>
+
+    <div class="h-10rem"/>
 
     <div id="experiencia" v-animation-on-scroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }" class="card animation-duration-1000 mb-8 ml-2 mr-2">
-      <h1>Frameworks...</h1>
+      <h1 style="text-align:center">Technologies...</h1>
       <MeterGroup :value="value" labelPosition="start">
         <template #label="{ value }">
           <div class="flex flex-wrap gap-3">
@@ -183,9 +329,5 @@ export default {
         </template>
       </MeterGroup>
     </div>
-
-
-
-
   </main>
 </template>
