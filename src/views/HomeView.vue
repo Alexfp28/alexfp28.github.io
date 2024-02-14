@@ -10,8 +10,16 @@ export default {
         {label: 'Angular', color1: '#fa8391', color2: '#ff0000', value: 10, icon: 'https://raw.githubusercontent.com/Alexfp28/website/master/images/angular.png'}
       ],
       events: [
-        { status: '2FCGM', date: '15/10/2020 10:30', icon: 'pi pi-desktop', color: '#bf2b7b' },
-        { status: '2CFGS', date: '15/10/2020 14:00', icon: 'pi pi-spin pi-cog', color: '#bf2b7b',image: 'https://raw.githubusercontent.com/Alexfp28/website/master/images/program.jpg' }
+        { status: '2FCGM', date: '16 años', icon: 'pi pi-check', color: '#bf2b7b',
+          desc: "Este inicio de curso fue un el comienzo del camino, donde empecé a interesarme más sobre el mundo de la informática, " +
+              "tengo que decir que no toqué nada de lenguajes de programación, pero empezaba a mirar documentación relacionada con Java " +
+              "y Python por recomendación de un profesor."
+        },
+        { status: '2CFGS', date: '18 años', icon: 'pi pi-spin pi-cog', color: '#bf2b7b',image: 'https://raw.githubusercontent.com/Alexfp28/website/master/images/programming.jpeg',
+          desc: "El inicio de este curso fue un tanto diferente, empecé tocando lenguajes como Java y MySQL, pero a medida que iba avanzando " +
+              "me interesaba más la programción web, cuando llegué al año actual me decidí por dar lo mejor de mi (dándolo anteriormente), " +
+              "para poder destacar en lo mío y poder aspirar lejos, fue ahí donde inicie cursos de programación web sobre Angula, React y Vue.js..."
+        }
       ]
 
     };
@@ -44,7 +52,7 @@ export default {
   <main>
     <Toolbar style="border-radius: 3rem; padding: 1rem 1rem 1rem 1.5rem; border-color: #bf2b7b">
       <template #start>
-        <Avatar image="https://raw.githubusercontent.com/Alexfp28/website/master/images/logo-circular.png?token=GHSAT0AAAAAACMUU2GHUVFIROJZIOBCJ776ZOMNJMA" style="width: 32px; height: 32px"/>
+        <Avatar image="https://raw.githubusercontent.com/Alexfp28/website/master/images/logo-circular.png" style="width: 32px; height: 32px"/>
         <div class="flex align-items-center gap-2 ml-3">
           <a href="#home"> <Button label="Home" text plain /></a>
           <a href="#personal"><Button label="About me" text plain /></a>
@@ -71,11 +79,7 @@ export default {
             </template>
             <template #content>
               <img v-if="slotProps.item.image" :src="`${slotProps.item.image}`" :alt="slotProps.item.name" width="200" class="shadow-1" />
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
-                neque quas!
-              </p>
-              <Button label="Read more" text></Button>
+              <p v-text="slotProps.item.desc"/>
             </template>
           </Card>
         </template>
