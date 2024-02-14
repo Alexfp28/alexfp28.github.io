@@ -5,16 +5,40 @@ export default {
     return {
       value: [
         {label: 'Java', color1: '#f9be24', color2: '#57955c', value: 50, icon: 'https://raw.githubusercontent.com/Alexfp28/website/master/images/java.png'},
-        {label: 'Vue.js', color1: '#57945c', color2: '#60a5fa', value: 30, icon: 'src/assets/images/vue.png'},
-        {label: 'React', color1: '#60a5fa', color2: '#fc8492', value: 10, icon: 'src/assets/images/react.png'},
-        {label: 'Angular', color1: '#fa8391', color2: '#ff0000', value: 10, icon: 'src/assets/images/angular.png'}
+        {label: 'Vue.js', color1: '#57945c', color2: '#60a5fa', value: 30, icon: 'https://raw.githubusercontent.com/Alexfp28/website/master/images/vue.png'},
+        {label: 'React', color1: '#60a5fa', color2: '#fc8492', value: 10, icon: 'https://raw.githubusercontent.com/Alexfp28/website/master/images/react.png'},
+        {label: 'Angular', color1: '#fa8391', color2: '#ff0000', value: 10, icon: 'https://raw.githubusercontent.com/Alexfp28/website/master/images/angular.png'}
+      ],
+      events: [
+        { status: '2FCGM', date: '15/10/2020 10:30', icon: 'pi pi-desktop', color: '#bf2b7b', image: 'game-controller.jpg' },
+        { status: '2CFGS', date: '15/10/2020 14:00', icon: 'pi pi-spin pi-cog', color: '#bf2b7b' }
       ]
+
     };
   }
 };
 
 
 </script>
+
+<style lang="scss" scoped>
+@media screen and (max-width: 960px) {
+  ::v-deep(.customized-timeline) {
+    .p-timeline-event:nth-child(even) {
+      flex-direction: row;
+
+      .p-timeline-event-content {
+        text-align: left;
+      }
+    }
+
+    .p-timeline-event-opposite {
+      flex: 0;
+    }
+  }
+}
+</style>
+
 
 <template>
   <main>
@@ -29,9 +53,36 @@ export default {
       </template>
     </Toolbar>
 
-    <div id="home">
 
+    <div id="home" class="mt-3">
+      <Timeline :value="events" align="alternate" class="customized-timeline">
+        <template #marker="slotProps">
+                <span class="flex w-2rem h-2rem align-items-center justify-content-center text-white border-circle z-1 shadow-1" :style="{ backgroundColor: slotProps.item.color }">
+                    <i :class="slotProps.item.icon"></i>
+                </span>
+        </template>
+        <template #content="slotProps">
+          <Card class="mt-3">
+            <template #title>
+              {{ slotProps.item.status }}
+            </template>
+            <template #subtitle>
+              {{ slotProps.item.date }}
+            </template>
+            <template #content>
+              <img v-if="slotProps.item.image" :src="`https://primefaces.org/cdn/primevue/images/product/${slotProps.item.image}`" :alt="slotProps.item.name" width="200" class="shadow-1" />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
+                neque quas!
+              </p>
+              <Button label="Read more" text></Button>
+            </template>
+          </Card>
+        </template>
+      </Timeline>
     </div>
+
+
 
     <div class="h-30rem"/>
 

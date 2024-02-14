@@ -15,6 +15,7 @@ import AnimateOnScroll from "primevue/animateonscroll";
 import Splitter from "primevue/splitter";
 import SplitterPanel from "primevue/splitterpanel";
 import Image from "primevue/image";
+import Timeline from "primevue/timeline";
 
 
 
@@ -32,6 +33,7 @@ app.directive('AnimationOnScroll',AnimateOnScroll)
 app.component('Splitter',Splitter)
 app.component('SplitterPanel',SplitterPanel)
 app.component('Image', Image)
+app.component('Timeline', Timeline)
 
 
 app.mount('#app')
