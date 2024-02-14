@@ -15,6 +15,15 @@ export default {
   </Toolbar>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+.zoomAvatar {
+  transition: transform .2s;
+  width: 100px;
+  height: 100px;
 
+}
+
+.zoomAvatar:hover {
+  transform: scale(1.2);
+}
 </style>

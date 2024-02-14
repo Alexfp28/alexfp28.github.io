@@ -25,9 +25,9 @@ export default {
           </p>
         </div>
         <div class="flex justify-content-center mr-8 ml-8 mb-3">
-          <a href="https://www.linkedin.com/in/alex-lópez-62b2222a0" style="text-decoration: none;"><Avatar icon="pi pi-linkedin" class="mr-2 zoomAvatar" size="large" shape="circle" style="background-color: #bf2b7b; color: white"/></a>
-          <a href="mailto:alexlopezdelafuente@gmail.com" style="text-decoration: none;"><Avatar icon="pi pi-envelope" class="mr-2 zoomAvatar" size="large" shape="circle" style="background-color: #bf2b7b; color: white"/></a>
-          <a href="https://github.com/Alexfp28" style="text-decoration: none;"><Avatar icon="pi pi-github" class="mr-2 zoomAvatar" size="large" shape="circle" style="background-color: #bf2b7b; color: white"/></a>
+          <a href="https://www.linkedin.com/in/alex-lópez-62b2222a0" style="text-decoration: none;" target="_blank"><Avatar icon="pi pi-linkedin" class="mr-2 zoomAvatar" size="large" shape="circle" style="background-color: #bf2b7b; color: white"/></a>
+          <a href="mailto:alexlopezdelafuente@gmail.com" style="text-decoration: none;" target="_blank"><Avatar icon="pi pi-envelope" class="mr-2 zoomAvatar" size="large" shape="circle" style="background-color: #bf2b7b; color: white"/></a>
+          <a href="https://github.com/Alexfp28" style="text-decoration: none;" target="_blank"><Avatar icon="pi pi-github" class="mr-2 zoomAvatar" size="large" shape="circle" style="background-color: #bf2b7b; color: white"/></a>
         </div>
       </SplitterPanel>
     </Splitter>
@@ -81,6 +81,6 @@ export default {
 }
 
 .zoom:hover {
-  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(1.2);
 }
 </style>
