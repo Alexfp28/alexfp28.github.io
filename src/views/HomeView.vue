@@ -236,7 +236,7 @@ export default {
             <SplitterPanel class="flex align-items-center justify-content-center" :size="50">
               <Card style="width: 25rem; overflow: hidden;" class="mt-3 mb-3">
                 <template #header>
-                  <img alt="user header" src="../../images/background.jpg" width="400"/>
+                  <img alt="user header" src="https://raw.githubusercontent.com/Alexfp28/website/master/images/ayunt.jpg" width="400"/>
                 </template>
                 <template #title>Ayuntamiento La Vall d'Uixó</template>
                 <template #subtitle>Contrato de prácticas</template>
@@ -261,7 +261,7 @@ export default {
             <SplitterPanel class="flex align-items-center justify-content-center" :size="50">
               <Card style="width: 25rem; overflow: hidden;" class="mt-3 mb-3">
                 <template #header>
-                  <img alt="user header" src="../../images/gimnasio.jpg" width="400"/>
+                  <img alt="user header" src="https://raw.githubusercontent.com/Alexfp28/website/master/images/campo.jpg" width="250"/>
                 </template>
                 <template #title>Trabajo en el campo</template>
                 <template #subtitle>Voluntad y compromiso</template>
