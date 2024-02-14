@@ -4,7 +4,7 @@ export default {
   data() {
     return {
       value: [
-        {label: 'Java', color1: '#f9be24', color2: '#57955c', value: 50, icon: 'src/assets/images/java.png'},
+        {label: 'Java', color1: '#f9be24', color2: '#57955c', value: 50, icon: 'https://raw.githubusercontent.com/Alexfp28/website/master/images/java.png'},
         {label: 'Vue.js', color1: '#57945c', color2: '#60a5fa', value: 30, icon: 'src/assets/images/vue.png'},
         {label: 'React', color1: '#60a5fa', color2: '#fc8492', value: 10, icon: 'src/assets/images/react.png'},
         {label: 'Angular', color1: '#fa8391', color2: '#ff0000', value: 10, icon: 'src/assets/images/angular.png'}
@@ -20,7 +20,7 @@ export default {
   <main>
     <Toolbar style="border-radius: 3rem; padding: 1rem 1rem 1rem 1.5rem; border-color: #bf2b7b">
       <template #start>
-        <Avatar image="images/logo-circular.png" style="width: 32px; height: 32px"/>
+        <Avatar image="https://raw.githubusercontent.com/Alexfp28/website/master/images/logo-circular.png?token=GHSAT0AAAAAACMUU2GHUVFIROJZIOBCJ776ZOMNJMA" style="width: 32px; height: 32px"/>
         <div class="flex align-items-center gap-2 ml-3">
           <a href="#home"> <Button label="Home" text plain /></a>
           <a href="#personal"><Button label="About me" text plain /></a>
