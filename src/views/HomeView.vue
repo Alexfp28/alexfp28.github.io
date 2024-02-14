@@ -10,8 +10,8 @@ export default {
         {label: 'Angular', color1: '#fa8391', color2: '#ff0000', value: 10, icon: 'https://raw.githubusercontent.com/Alexfp28/website/master/images/angular.png'}
       ],
       events: [
-        { status: '2FCGM', date: '15/10/2020 10:30', icon: 'pi pi-desktop', color: '#bf2b7b', image: 'game-controller.jpg' },
-        { status: '2CFGS', date: '15/10/2020 14:00', icon: 'pi pi-spin pi-cog', color: '#bf2b7b' }
+        { status: '2FCGM', date: '15/10/2020 10:30', icon: 'pi pi-desktop', color: '#bf2b7b' },
+        { status: '2CFGS', date: '15/10/2020 14:00', icon: 'pi pi-spin pi-cog', color: '#bf2b7b',image: 'https://raw.githubusercontent.com/Alexfp28/website/master/images/program.jpg' }
       ]
 
     };
@@ -70,7 +70,7 @@ export default {
               {{ slotProps.item.date }}
             </template>
             <template #content>
-              <img v-if="slotProps.item.image" :src="`https://primefaces.org/cdn/primevue/images/product/${slotProps.item.image}`" :alt="slotProps.item.name" width="200" class="shadow-1" />
+              <img v-if="slotProps.item.image" :src="`${slotProps.item.image}`" :alt="slotProps.item.name" width="200" class="shadow-1" />
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate
                 neque quas!
