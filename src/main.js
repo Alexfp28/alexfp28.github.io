@@ -16,6 +16,7 @@ import Splitter from "primevue/splitter";
 import SplitterPanel from "primevue/splitterpanel";
 import Image from "primevue/image";
 import Timeline from "primevue/timeline";
+import TabMenu from "primevue/tabmenu";
 
 
 
@@ -34,6 +35,7 @@ app.component('Splitter',Splitter)
 app.component('SplitterPanel',SplitterPanel)
 app.component('Image', Image)
 app.component('Timeline', Timeline)
+app.component('TabMenu', TabMenu)
 
 
 app.mount('#app')

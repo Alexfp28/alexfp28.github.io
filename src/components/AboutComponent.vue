@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-  <div id="about" v-animation-on-scroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }"
+  <div id="about"
        class="align-items-center mb-5 mt-3 mr-2 ml-2 animation-duration-1000">
     <h1 style="text-align:center">Experiencia Personal...</h1>
     <Splitter layout="vertical" style=" border-color: #bf2b7b">

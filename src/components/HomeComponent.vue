@@ -1,12 +1,22 @@
 <script>
 export default {
-  name: "HomeComponent"
+  name: "HomeComponent",
+  data() {
+    return {
+      items: [
+        { name: 'Historial', image: 'pi pi-spin pi-cog', url: "#learn"},
+        { name: 'Experiencia Personal', image: 'pi pi-id-card', url: "#about"},
+        { name: 'Experiencia Laboral', image: 'pi pi-wrench', url:"#laboral" },
+        { name: 'Tecnologias', image: 'pi pi-bolt', url: "#experiencia"},
+      ]
+    }
+  }
 }
 </script>
 
 <template>
   <div id="home"
-       class="align-items-center mb-5 mt-4 mr-2 ml-2 animation-duration-1000">
+       class="align-items-center mb-5 mt-4 mr-2 ml-2">
     <Splitter layout="vertical" style=" border-color: #bf2b7b">
       <SplitterPanel :size="50">
         <div class="flex justify-content-center mt-4">
@@ -24,11 +34,18 @@ export default {
             gestionar mis atributos / variables con gusto.
           </p>
         </div>
-        <div class="flex justify-content-center mr-8 ml-8 mb-3">
-          <a href="https://www.linkedin.com/in/alex-lópez-62b2222a0" style="text-decoration: none;" target="_blank"><Avatar icon="pi pi-linkedin" class="mr-2 zoomAvatar" size="large" shape="circle" style="background-color: #bf2b7b; color: white"/></a>
-          <a href="mailto:alexlopezdelafuente@gmail.com" style="text-decoration: none;" target="_blank"><Avatar icon="pi pi-envelope" class="mr-2 zoomAvatar" size="large" shape="circle" style="background-color: #bf2b7b; color: white"/></a>
-          <a href="https://github.com/Alexfp28" style="text-decoration: none;" target="_blank"><Avatar icon="pi pi-github" class="mr-2 zoomAvatar" size="large" shape="circle" style="background-color: #bf2b7b; color: white"/></a>
+
+        <div class="flex align-items-center justify-content-center">
+          <TabMenu :model="items">
+            <template #item="{ item, props }">
+              <a v-ripple v-bind="props.action" class="flex align-items-center gap-2">
+                <i :class="item.image" style="color: #da639b"/>
+                <a :href="item.url" style="text-decoration: none; color: #da639b"> <span class="font-bold">{{ item.name }}</span> </a>
+              </a>
+            </template>
+          </TabMenu>
         </div>
+
       </SplitterPanel>
     </Splitter>
   </div>

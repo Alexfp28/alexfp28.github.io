@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-  <div id="experiencia" v-animation-on-scroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }" class="card animation-duration-1000 mb-8 ml-2 mr-2">
+  <div id="experiencia" class="card animation-duration-1000 mb-8 ml-2 mr-2">
     <h1 style="text-align:center">Tecnologías...</h1>
     <MeterGroup :value="value" labelPosition="start">
       <template #label="{ value }">

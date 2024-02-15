@@ -27,7 +27,7 @@ export default  {
 </script>
 
 <template>
-  <div id="learn" v-animation-on-scroll="{ enterClass: 'fadein', leaveClass: 'fadeout' }"
+  <div id="learn"
        class="mt-3 align-items-center justify-content-center">
     <h1 style="text-align:center">Mi historial...</h1>
     <Timeline :value="events" align="alternate" class="customized-timeline">
