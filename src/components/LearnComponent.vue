@@ -4,18 +4,18 @@ export default  {
   data() {
     return {
       events: [
-        { status: '2FCGM', date: '16 años', icon: 'pi pi-check', color: '#bf2b7b', image: "https://raw.githubusercontent.com/Alexfp28/website/master/images/partsofpc.jpg",
+        { status: '2FCGM', date: '2020 - 2022', icon: 'pi pi-check', color: '#bf2b7b', image: "https://raw.githubusercontent.com/Alexfp28/website/master/images/partsofpc.jpg",
           desc: "Este inicio de curso fue un el comienzo del camino, donde empecé a interesarme más sobre el mundo de la informática, " +
             "tengo que decir que no toqué nada de lenguajes de programación, pero empezaba a mirar documentación relacionada con Java " +
             "y Python por recomendación de un profesor."
         },
-        { status: 'Curso FlexyGo Low Code', date: '18 años', icon: 'pi pi-check', color: '#bf2b7b',image: 'https://raw.githubusercontent.com/Alexfp28/website/master/images/udemy.png',
+        { status: 'Curso FlexyGo Low Code', date: '2023', icon: 'pi pi-check', color: '#bf2b7b',image: 'https://raw.githubusercontent.com/Alexfp28/website/master/images/udemy.png',
           desc: "Inicie un curso ofrecido por mi tutora, Nereida, nos recomendó realizarlo para poder gestionar una empresa si somos trabajadores" +
             " o nuestra propia empresa con un framework llamado FlexyGo, la verdad que me impactó mucho la personalización que tiene y poder " +
             "calcular y tener registro de todo lo que necesites con un poco de código (Low Code). ",
-          url: "https://www.udemy.com/certificate/UC-47e0593f-c641-4182-9f01-940ccbe0119b/"
+          url: "https://www.udemy.com/certificate/UC-47e0593f-c641-4182-9f01-940ccbe0119b/",
         },
-        { status: '2CFGS', date: '18 años', icon: 'pi pi-spin pi-cog', color: '#bf2b7b',image: 'https://raw.githubusercontent.com/Alexfp28/website/master/images/programming.jpeg',
+        { status: '2CFGS', date: '2022 - 2024', icon: 'pi pi-spin pi-cog', color: '#bf2b7b',image: 'https://raw.githubusercontent.com/Alexfp28/website/master/images/programming.jpeg',
           desc: "El inicio de este curso fue un tanto diferente, empecé tocando lenguajes como Java y MySQL, pero a medida que iba avanzando " +
             "me interesaba más la programción web, cuando llegué al año actual me decidí por dar lo mejor de mi (dándolo anteriormente), " +
             "para poder destacar en lo mío y poder aspirar lejos, fue ahí donde inicie cursos de programación web sobre Angula, React y Vue.js..."
@@ -28,7 +28,7 @@ export default  {
 
 <template>
   <div id="learn"
-       class="mt-3 align-items-center justify-content-center">
+       class="mt-3 align-items-center justify-content-center ml-5 mr-5">
     <h1 style="text-align:center">Mi historial...</h1>
     <Timeline :value="events" align="alternate" class="customized-timeline">
       <template #marker="slotProps">
@@ -52,6 +52,21 @@ export default  {
             </Button>
           </template>
         </Card>
+
+        <!-- CODIGO GRACIOSO PARA VER SI FUNCIONA LA CARTA PARALELA (NO FUNCIONA) TENGO QUE SEGUIR PROBANDO -->
+
+<!--        <Card v-if="slotProps.item.status1" class="mt-3">-->
+<!--          <template #title>-->
+<!--            {{ slotProps.item.status1 }}-->
+<!--          </template>-->
+<!--          <template #subtitle>-->
+<!--            {{ slotProps.item.date1 }}-->
+<!--          </template>-->
+<!--          <template #content>-->
+<!--            <img v-if="slotProps.item.image1" :src="`${slotProps.item.image1}`" :alt="slotProps.item.name" width="200" class="shadow-1" />-->
+<!--            <p v-text="slotProps.item.desc1"/>-->
+<!--          </template>-->
+<!--        </Card>-->
       </template>
     </Timeline>
   </div>

@@ -3,19 +3,19 @@
 import ToolBarComponent from "@/components/ToolBarComponent.vue";
 import HomeComponent from "@/components/HomeComponent.vue";
 import LearnComponent from '@/components/LearnComponent.vue'
-import AboutComponent from '@/components/AboutComponent.vue'
 import LaboralComponent from '@/components/LaboralComponent.vue'
 import ExperienceComponent from '@/components/ExperienceComponent.vue'
 import FooterComponent from '@/components/FooterComponent.vue'
+import PersonalComponent from '@/components/PersonalComponent.vue'
 
 export default {
-  components: { FooterComponent, ExperienceComponent, LaboralComponent, AboutComponent, LearnComponent, HomeComponent, ToolBarComponent},
+  components: { FooterComponent, ExperienceComponent, LaboralComponent, PersonalComponent, LearnComponent, HomeComponent, ToolBarComponent},
   data() {
     return {
       "ToolBarComponent": ToolBarComponent,
       "HomeComponent": HomeComponent,
       "LearnComponent": LearnComponent,
-      "AboutComponent": AboutComponent,
+      "PersonalComponent": PersonalComponent,
       "LaboralComponent": LaboralComponent,
       "ExperienceComponent": ExperienceComponent,
       "FooterComponent": FooterComponent
@@ -37,7 +37,7 @@ export default {
 
     <div class="h-5rem"/>
 
-    <AboutComponent/>
+    <PersonalComponent/>
 
     <div class="h-5rem"/>
 

@@ -4,10 +4,24 @@ export default {
   data() {
     return {
       value: [
-        {label: 'Java', color1: '#f9be24', color2: '#57955c', value: 50, icon: 'https://raw.githubusercontent.com/Alexfp28/website/master/images/java.png'},
-        {label: 'Vue.js', color1: '#57945c', color2: '#60a5fa', value: 30, icon: 'https://raw.githubusercontent.com/Alexfp28/website/master/images/vue.png'},
-        {label: 'React', color1: '#60a5fa', color2: '#fc8492', value: 10, icon: 'https://raw.githubusercontent.com/Alexfp28/website/master/images/react.png'},
-        {label: 'Angular', color1: '#fa8391', color2: '#ff0000', value: 10, icon: 'https://raw.githubusercontent.com/Alexfp28/website/master/images/angular.png'}
+        { label: 'Java', color1: '#f9be24', color2: '#57955c', value: 50, icon: 'https://raw.githubusercontent.com/Alexfp28/website/master/images/java.png',
+        desc: 'Empecé con este lenguaje de programación en el inicio del curso de DAM, prácticamente es mi primer lenguaje, ' +
+              'le tengo cariño por su tipo de enseñanza, me aportó mucho porque al gustarme Java empecé a investigar sobre ' +
+              'otro tipo de lenguajes.'
+        },
+        { label: 'Vue.js', color1: '#57945c', color2: '#60a5fa', value: 30, icon: 'https://raw.githubusercontent.com/Alexfp28/website/master/images/vue.png',
+        desc: 'Este framework es el que estoy intentando dominar ahora mismo, demostrándolo con esta página web, gracias a este' +
+              ' me interesó del todo el mundo de la programación web, un lenguaje que tiene muchísima documentación y con tenedencia ' +
+              'de empleo bastante alta con JavaScript.'
+        },
+        {label: 'React', color1: '#60a5fa', color2: '#fc8492', value: 10, icon: 'https://raw.githubusercontent.com/Alexfp28/website/master/images/react.png',
+        desc: 'React es un mundo nuevo para mi, realizando un curso de Udemy, quiero poder demostrar lo autodidacta que soy, para' +
+              'poder formarme lo mejor posible sobre este mundo de lenguajes, frameworks... (En progreso...)'
+        },
+        {label: 'Angular', color1: '#fa8391', color2: '#ff0000', value: 10, icon: 'https://raw.githubusercontent.com/Alexfp28/website/master/images/angular.png',
+        desc: 'Angular es un mundo nuevo para mi, realizando un curso de Udemy, quiero poder demostrar lo autodidacta que soy, para' +
+          'poder formarme lo mejor posible sobre este mundo de lenguajes, frameworks... (En progreso...)'
+        }
       ],
     }
   }
@@ -15,7 +29,7 @@ export default {
 </script>
 
 <template>
-  <div id="experiencia" class="card animation-duration-1000 mb-8 ml-2 mr-2">
+  <div id="experiencia" class="card mb-1 ml-5 mr-5" style="height: 350px">
     <h1 style="text-align:center">Tecnologías...</h1>
     <MeterGroup :value="value" labelPosition="start">
       <template #label="{ value }">
@@ -25,8 +39,8 @@ export default {
               <template #content>
                 <div class="flex justify-content-between gap-5">
                   <div class="flex flex-column gap-1">
-                    <span class="text-secondary text-sm">{{ val.label }}</span>
-                    <span class="font-bold text-lg">{{ val.value }}%</span>
+                    <span class="font-bold text-lg">{{ val.label }}</span>
+                    <span class="p-text-secondary text-sm">{{ val.desc }}</span>
                   </div>
                   <span
                     class="w-2rem h-2rem border-circle inline-flex justify-content-center align-items-center text-center">
@@ -41,12 +55,6 @@ export default {
       <template #meter="slotProps">
           <span :class="slotProps.class"
                 :style="{ background: `linear-gradient(to right, ${slotProps.value.color1}, ${slotProps.value.color2})`, width: slotProps.size }"/>
-      </template>
-      <template #start="{ totalPercent }">
-        <div class="flex justify-content-between mt-3 mb-2 relative">
-          <span>Experience</span>
-          <span :style="{ width: totalPercent + '%' }" class="absolute text-right">{{ totalPercent }}%</span>
-        </div>
       </template>
     </MeterGroup>
   </div>

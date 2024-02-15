@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-  <Toolbar style="border-radius: 3rem; padding: 1rem 1rem 1rem 1.5rem; border-color: #bf2b7b; text-align: center">
+  <Toolbar style="border-radius: 3rem; padding: 1rem 1rem 1rem 1.5rem; border-color: #bf2b7b; text-align: center" class="mr-5 ml-5">
     <template #start>
       <Avatar image="https://raw.githubusercontent.com/Alexfp28/website/master/images/logo-circular.png" style="width: 32px; height: 32px" class="zoomAvatar"/>
     </template>
