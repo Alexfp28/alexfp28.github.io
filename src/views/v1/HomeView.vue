@@ -1,12 +1,12 @@
 <script>
 
-import ToolBarComponent from "@/components/ToolBarComponent.vue";
-import HomeComponent from "@/components/HomeComponent.vue";
-import LearnComponent from '@/components/LearnComponent.vue'
-import LaboralComponent from '@/components/LaboralComponent.vue'
-import ExperienceComponent from '@/components/ExperienceComponent.vue'
-import FooterComponent from '@/components/FooterComponent.vue'
-import PersonalComponent from '@/components/PersonalComponent.vue'
+import ToolBarComponent from "@/components/v1/ToolBarComponent.vue";
+import HomeComponent from "@/components/v1/HomeComponent.vue";
+import LearnComponent from '@/components/v1/LearnComponent.vue'
+import LaboralComponent from '@/components/v1/LaboralComponent.vue'
+import ExperienceComponent from '@/components/v1/ExperienceComponent.vue'
+import FooterComponent from '@/components/v1/FooterComponent.vue'
+import PersonalComponent from '@/components/v1/PersonalComponent.vue'
 
 export default {
   components: { FooterComponent, ExperienceComponent, LaboralComponent, PersonalComponent, LearnComponent, HomeComponent, ToolBarComponent},

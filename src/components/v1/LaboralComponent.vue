@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-  <div id="laboral" class="card animation-duration-1000 mb-8 ml-5 mr-5">
+  <div id="laboralv1" class="card animation-duration-1000 mb-8 ml-5 mr-5">
     <h1 style="text-align:center">Experiencia Laboral...</h1>
     <Splitter layout="vertical" style=" border-color: #bf2b7b">
       <SplitterPanel :size="50">

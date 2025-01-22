@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-  <div id="inicio"
+  <div id="iniciov1"
        class="align-items-center mb-5 mt-4 mr-5 ml-5">
     <Splitter layout="vertical" style=" border-color: #bf2b7b">
       <SplitterPanel :size="50">

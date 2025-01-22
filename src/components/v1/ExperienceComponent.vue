@@ -29,7 +29,7 @@ export default {
 </script>
 
 <template>
-  <div id="experiencia" class="card mb-1 ml-5 mr-5" style="height: 350px">
+  <div id="experienciav1" class="card mb-1 ml-5 mr-5" style="height: 350px">
     <h1 style="text-align:center">Tecnologías...</h1>
     <MeterGroup :value="value" labelPosition="start">
       <template #label="{ value }">

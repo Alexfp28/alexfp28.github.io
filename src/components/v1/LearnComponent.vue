@@ -27,7 +27,7 @@ export default  {
 </script>
 
 <template>
-  <div id="learn"
+  <div id="learnv1"
        class="mt-3 align-items-center justify-content-center ml-5 mr-5">
     <h1 style="text-align:center">Mi historial...</h1>
     <Timeline :value="events" align="alternate" class="customized-timeline">
